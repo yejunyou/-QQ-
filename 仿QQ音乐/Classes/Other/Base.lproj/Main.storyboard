@@ -25,6 +25,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dzq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-me-AVa" userLabel="背景图片">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXN-9m-sLr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wne-bj-ULd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fui-Ty-6az" userLabel="顶部view">
                                 <rect key="frame" x="0.0" y="20" width="375" height="100"/>
                                 <subviews>
@@ -151,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="397"/>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="icU-qT-nJ2" userLabel="Icon View">
-                                <rect key="frame" x="12.5" y="120" width="350" height="350"/>
+                                <rect key="frame" x="20.5" y="136" width="334" height="334"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="icU-qT-nJ2" secondAttribute="height" multiplier="1:1" id="D5O-5n-mAa"/>
                                 </constraints>
@@ -160,7 +168,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lPA-oY-wgM" secondAttribute="bottom" id="6JP-fl-djV"/>
+                            <constraint firstAttribute="trailing" secondItem="cXN-9m-sLr" secondAttribute="trailing" id="8UB-y5-BHN"/>
                             <constraint firstItem="fui-Ty-6az" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="DUr-WS-OCo"/>
+                            <constraint firstItem="cXN-9m-sLr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G5C-QK-TLA"/>
                             <constraint firstItem="lPA-oY-wgM" firstAttribute="top" secondItem="IRI-cr-7T4" secondAttribute="bottom" id="G5U-Ey-4kV"/>
                             <constraint firstItem="lPA-oY-wgM" firstAttribute="top" secondItem="Zws-Rm-kSo" secondAttribute="bottom" id="GDG-qP-99A"/>
                             <constraint firstItem="icU-qT-nJ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HVK-Yd-1lw"/>
@@ -173,13 +183,25 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9Vl-me-AVa" secondAttribute="bottom" id="e16-0e-6QA"/>
                             <constraint firstItem="lPA-oY-wgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g1K-Ka-slE"/>
                             <constraint firstItem="fui-Ty-6az" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g2Y-7t-Dlt"/>
-                            <constraint firstItem="icU-qT-nJ2" firstAttribute="top" secondItem="fui-Ty-6az" secondAttribute="bottom" id="hRT-uE-iSe"/>
+                            <constraint firstItem="icU-qT-nJ2" firstAttribute="top" secondItem="fui-Ty-6az" secondAttribute="bottom" constant="16" id="hRT-uE-iSe"/>
                             <constraint firstItem="9Vl-me-AVa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kHL-OD-rEu"/>
                             <constraint firstItem="9Vl-me-AVa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kb9-j4-vLc"/>
                             <constraint firstAttribute="trailing" secondItem="fui-Ty-6az" secondAttribute="trailing" id="oA6-F3-sjU"/>
                             <constraint firstAttribute="trailing" secondItem="9Vl-me-AVa" secondAttribute="trailing" id="qf3-80-qXi"/>
+                            <constraint firstItem="cXN-9m-sLr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tzs-Wl-wkg"/>
+                            <constraint firstAttribute="bottom" secondItem="cXN-9m-sLr" secondAttribute="bottom" id="wqt-Ha-d46"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="fqD-26-yQz" id="2GU-hE-N3D"/>
+                        <outlet property="iconView" destination="icU-qT-nJ2" id="46N-Ym-IlV"/>
+                        <outlet property="lrcView" destination="Zws-Rm-kSo" id="7p0-Sq-4Am"/>
+                        <outlet property="playOrPauseBtn" destination="MMn-PN-DaO" id="XXq-vV-4W1"/>
+                        <outlet property="progressSlider" destination="tjT-6l-OZx" id="7YV-Dk-MQr"/>
+                        <outlet property="singerLabel" destination="UoY-6z-9G6" id="Cj3-dx-dqR"/>
+                        <outlet property="songLabel" destination="IRI-cr-7T4" id="86E-mB-Hsb"/>
+                        <outlet property="totalTimeLabel" destination="JOR-bf-8lf" id="jlp-Kl-FCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

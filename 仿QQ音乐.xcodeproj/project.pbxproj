@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75C07E481EE30C4400FE6C3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E471EE30C4400FE6C3A /* main.m */; };
-		75C07E4B1EE30C4400FE6C3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E4A1EE30C4400FE6C3A /* AppDelegate.m */; };
-		75C07E511EE30C4400FE6C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E4F1EE30C4400FE6C3A /* Main.storyboard */; };
+		7575BF931EE3975200D1DD4B /* YYPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BF921EE3975200D1DD4B /* YYPlayingViewController.m */; };
+		7575BF9E1EE397A800D1DD4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BF951EE397A800D1DD4B /* AppDelegate.m */; };
+		7575BF9F1EE397A800D1DD4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7575BF961EE397A800D1DD4B /* Assets.xcassets */; };
+		7575BFA01EE397A800D1DD4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7575BF981EE397A800D1DD4B /* LaunchScreen.storyboard */; };
+		7575BFA11EE397A800D1DD4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7575BF9A1EE397A800D1DD4B /* Main.storyboard */; };
+		7575BFA31EE397A800D1DD4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BF9D1EE397A800D1DD4B /* main.m */; };
+		7575BFA71EE3986B00D1DD4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7575BFA61EE3986B00D1DD4B /* Info.plist */; };
+		7575BFAA1EE398A600D1DD4B /* UIView+FrameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */; };
 		75C07E541EE30C4400FE6C3A /* _QQ__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E521EE30C4400FE6C3A /* _QQ__.xcdatamodeld */; };
-		75C07E561EE30C4400FE6C3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E551EE30C4400FE6C3A /* Assets.xcassets */; };
-		75C07E591EE30C4400FE6C3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E571EE30C4400FE6C3A /* LaunchScreen.storyboard */; };
 		75C07E641EE30C4400FE6C3A /* _QQ__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E631EE30C4400FE6C3A /* _QQ__Tests.m */; };
 		75C07E6F1EE30C4400FE6C3A /* _QQ__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E6E1EE30C4400FE6C3A /* _QQ__UITests.m */; };
-		75C07E7E1EE30C9600FE6C3A /* YYPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E7D1EE30C9600FE6C3A /* YYPlayingViewController.m */; };
 		75C07EAD1EE30DEC00FE6C3A /* bb@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E821EE30DEC00FE6C3A /* bb@2x.jpg */; };
 		75C07EAE1EE30DEC00FE6C3A /* bb_icon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E831EE30DEC00FE6C3A /* bb_icon@2x.jpg */; };
 		75C07EAF1EE30DEC00FE6C3A /* dzq@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75C07E841EE30DEC00FE6C3A /* dzq@2x.jpg */; };
@@ -77,23 +79,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7575BF911EE3975200D1DD4B /* YYPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPlayingViewController.h; sourceTree = "<group>"; };
+		7575BF921EE3975200D1DD4B /* YYPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPlayingViewController.m; sourceTree = "<group>"; };
+		7575BF941EE397A800D1DD4B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7575BF951EE397A800D1DD4B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7575BF961EE397A800D1DD4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7575BF991EE397A800D1DD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7575BF9B1EE397A800D1DD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		7575BF9D1EE397A800D1DD4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7575BFA61EE3986B00D1DD4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjust.h"; sourceTree = "<group>"; };
+		7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjust.m"; sourceTree = "<group>"; };
 		75C07E431EE30C4400FE6C3A /* 仿QQ音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿QQ音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75C07E471EE30C4400FE6C3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		75C07E491EE30C4400FE6C3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		75C07E4A1EE30C4400FE6C3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		75C07E501EE30C4400FE6C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75C07E531EE30C4400FE6C3A /* _QQ__.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _QQ__.xcdatamodel; sourceTree = "<group>"; };
-		75C07E551EE30C4400FE6C3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75C07E581EE30C4400FE6C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		75C07E5A1EE30C4400FE6C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C07E5F1EE30C4400FE6C3A /* 仿QQ音乐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿QQ音乐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C07E631EE30C4400FE6C3A /* _QQ__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _QQ__Tests.m; sourceTree = "<group>"; };
 		75C07E651EE30C4400FE6C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C07E6A1EE30C4400FE6C3A /* 仿QQ音乐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿QQ音乐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C07E6E1EE30C4400FE6C3A /* _QQ__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _QQ__UITests.m; sourceTree = "<group>"; };
 		75C07E701EE30C4400FE6C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75C07E7C1EE30C9600FE6C3A /* YYPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPlayingViewController.h; sourceTree = "<group>"; };
-		75C07E7D1EE30C9600FE6C3A /* YYPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPlayingViewController.m; sourceTree = "<group>"; };
 		75C07E821EE30DEC00FE6C3A /* bb@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb@2x.jpg"; sourceTree = "<group>"; };
 		75C07E831EE30DEC00FE6C3A /* bb_icon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bb_icon@2x.jpg"; sourceTree = "<group>"; };
 		75C07E841EE30DEC00FE6C3A /* dzq@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dzq@2x.jpg"; sourceTree = "<group>"; };
@@ -162,6 +166,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7575BF8A1EE3972600D1DD4B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7575BF8B1EE3972600D1DD4B /* Controller */,
+				7575BF8C1EE3972600D1DD4B /* Model */,
+				7575BF8D1EE3972600D1DD4B /* Other */,
+				7575BF8F1EE3972600D1DD4B /* Tool */,
+				7575BF901EE3972600D1DD4B /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7575BF8B1EE3972600D1DD4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7575BF911EE3975200D1DD4B /* YYPlayingViewController.h */,
+				7575BF921EE3975200D1DD4B /* YYPlayingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7575BF8C1EE3972600D1DD4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7575BF8D1EE3972600D1DD4B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7575BF941EE397A800D1DD4B /* AppDelegate.h */,
+				7575BF951EE397A800D1DD4B /* AppDelegate.m */,
+				7575BF961EE397A800D1DD4B /* Assets.xcassets */,
+				7575BF971EE397A800D1DD4B /* Base.lproj */,
+				7575BF9D1EE397A800D1DD4B /* main.m */,
+				7575BF8E1EE3972600D1DD4B /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7575BF8E1EE3972600D1DD4B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7575BF8F1EE3972600D1DD4B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */,
+				7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		7575BF901EE3972600D1DD4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7575BF971EE397A800D1DD4B /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7575BF981EE397A800D1DD4B /* LaunchScreen.storyboard */,
+				7575BF9A1EE397A800D1DD4B /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		75C07E3A1EE30C4400FE6C3A = {
 			isa = PBXGroup;
 			children = (
@@ -185,14 +262,7 @@
 		75C07E451EE30C4400FE6C3A /* 仿QQ音乐 */ = {
 			isa = PBXGroup;
 			children = (
-				75C07E491EE30C4400FE6C3A /* AppDelegate.h */,
-				75C07E4A1EE30C4400FE6C3A /* AppDelegate.m */,
-				75C07E7C1EE30C9600FE6C3A /* YYPlayingViewController.h */,
-				75C07E7D1EE30C9600FE6C3A /* YYPlayingViewController.m */,
-				75C07E4F1EE30C4400FE6C3A /* Main.storyboard */,
-				75C07E551EE30C4400FE6C3A /* Assets.xcassets */,
-				75C07E571EE30C4400FE6C3A /* LaunchScreen.storyboard */,
-				75C07E5A1EE30C4400FE6C3A /* Info.plist */,
+				7575BF8A1EE3972600D1DD4B /* Classes */,
 				75C07E521EE30C4400FE6C3A /* _QQ__.xcdatamodeld */,
 				75C07E461EE30C4400FE6C3A /* Supporting Files */,
 			);
@@ -202,8 +272,8 @@
 		75C07E461EE30C4400FE6C3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7575BFA61EE3986B00D1DD4B /* Info.plist */,
 				75C07E801EE30DEC00FE6C3A /* Resources */,
-				75C07E471EE30C4400FE6C3A /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -411,6 +481,7 @@
 				75C07EC21EE30DEC00FE6C3A /* 10736444.lrc in Resources */,
 				75C07ECF1EE30DEC00FE6C3A /* 12309111.mp3 in Resources */,
 				75C07EBC1EE30DEC00FE6C3A /* nanquan_icon@2x.jpg in Resources */,
+				7575BF9F1EE397A800D1DD4B /* Assets.xcassets in Resources */,
 				75C07EB61EE30DEC00FE6C3A /* jj_icon@2x.png in Resources */,
 				75C07ECD1EE30DEC00FE6C3A /* 1201111234.mp3 in Resources */,
 				75C07ED51EE30DEC00FE6C3A /* Musics.plist in Resources */,
@@ -421,8 +492,8 @@
 				75C07EC11EE30DEC00FE6C3A /* 10405520.lrc in Resources */,
 				75C07EB81EE30DEC00FE6C3A /* kzxd_icon@2x.jpg in Resources */,
 				75C07EB31EE30DEC00FE6C3A /* jay@2x.jpg in Resources */,
-				75C07E591EE30C4400FE6C3A /* LaunchScreen.storyboard in Resources */,
 				75C07EC01EE30DEC00FE6C3A /* zxy_icon@2x.jpg in Resources */,
+				7575BFA01EE397A800D1DD4B /* LaunchScreen.storyboard in Resources */,
 				75C07ED21EE30DEC00FE6C3A /* 255319.mp3 in Resources */,
 				75C07EBD1EE30DEC00FE6C3A /* wf@2x.jpg in Resources */,
 				75C07EAF1EE30DEC00FE6C3A /* dzq@2x.jpg in Resources */,
@@ -433,6 +504,7 @@
 				75C07EB71EE30DEC00FE6C3A /* kzxd@2x.jpg in Resources */,
 				75C07EBA1EE30DEC00FE6C3A /* lkq_icon@2x.jpg in Resources */,
 				75C07ED11EE30DEC00FE6C3A /* 235319.mp3 in Resources */,
+				7575BFA11EE397A800D1DD4B /* Main.storyboard in Resources */,
 				75C07EC41EE30DEC00FE6C3A /* 12309111.lrc in Resources */,
 				75C07EB51EE30DEC00FE6C3A /* jj@2x.jpg in Resources */,
 				75C07EBF1EE30DEC00FE6C3A /* zxy@2x.jpg in Resources */,
@@ -443,12 +515,11 @@
 				75C07ECA1EE30DEC00FE6C3A /* 月半小夜曲.lrc in Resources */,
 				75C07EB01EE30DEC00FE6C3A /* dzq_icon@2x.jpg in Resources */,
 				75C07EC51EE30DEC00FE6C3A /* 14945107.lrc in Resources */,
-				75C07E561EE30C4400FE6C3A /* Assets.xcassets in Resources */,
+				7575BFA71EE3986B00D1DD4B /* Info.plist in Resources */,
 				75C07ED31EE30DEC00FE6C3A /* 309769.mp3 in Resources */,
 				75C07EC31EE30DEC00FE6C3A /* 120125029.lrc in Resources */,
 				75C07EAD1EE30DEC00FE6C3A /* bb@2x.jpg in Resources */,
 				75C07EC61EE30DEC00FE6C3A /* 235319.lrc in Resources */,
-				75C07E511EE30C4400FE6C3A /* Main.storyboard in Resources */,
 				75C07EBB1EE30DEC00FE6C3A /* nanquan@2x.jpg in Resources */,
 				75C07ED41EE30DEC00FE6C3A /* 339744.mp3 in Resources */,
 			);
@@ -476,9 +547,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C07E541EE30C4400FE6C3A /* _QQ__.xcdatamodeld in Sources */,
-				75C07E7E1EE30C9600FE6C3A /* YYPlayingViewController.m in Sources */,
-				75C07E4B1EE30C4400FE6C3A /* AppDelegate.m in Sources */,
-				75C07E481EE30C4400FE6C3A /* main.m in Sources */,
+				7575BFAA1EE398A600D1DD4B /* UIView+FrameAdjust.m in Sources */,
+				7575BF931EE3975200D1DD4B /* YYPlayingViewController.m in Sources */,
+				7575BFA31EE397A800D1DD4B /* main.m in Sources */,
+				7575BF9E1EE397A800D1DD4B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,20 +586,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75C07E4F1EE30C4400FE6C3A /* Main.storyboard */ = {
+		7575BF981EE397A800D1DD4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				75C07E501EE30C4400FE6C3A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		75C07E571EE30C4400FE6C3A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75C07E581EE30C4400FE6C3A /* Base */,
+				7575BF991EE397A800D1DD4B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7575BF9A1EE397A800D1DD4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7575BF9B1EE397A800D1DD4B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -628,6 +700,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CZD89388LH;
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "仿QQ音乐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Future-Version.-QQ--";
@@ -640,6 +714,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CZD89388LH;
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "仿QQ音乐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Future-Version.-QQ--";
@@ -716,6 +792,7 @@
 				75C07E751EE30C4400FE6C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C07E761EE30C4400FE6C3A /* Build configuration list for PBXNativeTarget "仿QQ音乐Tests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +801,7 @@
 				75C07E781EE30C4400FE6C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75C07E791EE30C4400FE6C3A /* Build configuration list for PBXNativeTarget "仿QQ音乐UITests" */ = {
 			isa = XCConfigurationList;
@@ -732,6 +810,7 @@
 				75C07E7B1EE30C4400FE6C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
