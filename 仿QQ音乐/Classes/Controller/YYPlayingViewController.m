@@ -88,6 +88,20 @@
     self.currentPlayer = [YYAudioTool playMusicWithName:playingMusic.filename];
     self.totalTimeLabel.text = [NSString stringWithTime:self.currentPlayer.duration];
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
+    
+    // iconView动画
+    [self iconViewAnimation];
+}
+
+- (void)iconViewAnimation
+{
+    CABasicAnimation *rotationAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnim.fromValue = @(0);
+    rotationAnim.toValue = @(M_PI * 2);
+    rotationAnim.repeatCount = NSIntegerMax;
+    rotationAnim.duration = 30;
+    
+    [self.iconView.layer addAnimation:rotationAnim forKey:nil];
 }
 
 #pragma mark - 切换和暂停歌曲
