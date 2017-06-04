@@ -88,14 +88,24 @@
                                             <constraint firstAttribute="width" constant="64" id="nLf-HS-Hf2"/>
                                         </constraints>
                                         <state key="normal" image="player_btn_play_normal"/>
+                                        <state key="selected" image="player_btn_pause_normal"/>
+                                        <connections>
+                                            <action selector="playOrPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cK-dh-eru"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-UP-zrs" userLabel="previousButton">
                                         <rect key="frame" x="56" y="56" width="64" height="64"/>
                                         <state key="normal" image="player_btn_pre_normal"/>
+                                        <connections>
+                                            <action selector="previous" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWG-yN-YAs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-te-tXd" userLabel="NextButton">
                                         <rect key="frame" x="254" y="56" width="64" height="64"/>
                                         <state key="normal" image="player_btn_next_normal"/>
+                                        <connections>
+                                            <action selector="next" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8t-4X-vNg"/>
+                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-6l-OZx">
                                         <rect key="frame" x="48" y="6" width="279" height="31"/>
@@ -193,13 +203,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="albunView" destination="9Vl-me-AVa" id="ng5-rI-N7M"/>
                         <outlet property="currentTimeLabel" destination="fqD-26-yQz" id="2GU-hE-N3D"/>
                         <outlet property="iconView" destination="icU-qT-nJ2" id="46N-Ym-IlV"/>
                         <outlet property="lrcView" destination="Zws-Rm-kSo" id="7p0-Sq-4Am"/>
                         <outlet property="playOrPauseBtn" destination="MMn-PN-DaO" id="XXq-vV-4W1"/>
                         <outlet property="progressSlider" destination="tjT-6l-OZx" id="7YV-Dk-MQr"/>
                         <outlet property="singerLabel" destination="UoY-6z-9G6" id="Cj3-dx-dqR"/>
-                        <outlet property="songLabel" destination="IRI-cr-7T4" id="86E-mB-Hsb"/>
+                        <outlet property="songLabel" destination="gM3-W2-M9u" id="yo6-20-UBp"/>
                         <outlet property="totalTimeLabel" destination="JOR-bf-8lf" id="jlp-Kl-FCq"/>
                     </connections>
                 </viewController>
@@ -214,6 +225,7 @@
         <image name="main_tab_more" width="45" height="45"/>
         <image name="miniplayer_btn_playlist_close_b" width="40" height="40"/>
         <image name="player_btn_next_normal" width="64" height="64"/>
+        <image name="player_btn_pause_normal" width="64" height="64"/>
         <image name="player_btn_play_normal" width="64" height="64"/>
         <image name="player_btn_pre_normal" width="64" height="64"/>
     </resources>

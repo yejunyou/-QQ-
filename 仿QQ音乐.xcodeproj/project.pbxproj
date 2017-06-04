@@ -15,6 +15,21 @@
 		7575BFA31EE397A800D1DD4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BF9D1EE397A800D1DD4B /* main.m */; };
 		7575BFA71EE3986B00D1DD4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7575BFA61EE3986B00D1DD4B /* Info.plist */; };
 		7575BFAA1EE398A600D1DD4B /* UIView+FrameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */; };
+		7575BFAF1EE3A3A200D1DD4B /* YYMusicTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFAE1EE3A3A200D1DD4B /* YYMusicTool.m */; };
+		7575BFB21EE3A3B200D1DD4B /* YYAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFB11EE3A3B200D1DD4B /* YYAudioTool.m */; };
+		7575BFB51EE3A8D900D1DD4B /* YYMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFB41EE3A8D900D1DD4B /* YYMusic.m */; };
+		7575BFCE1EE3A9A400D1DD4B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7575BFB81EE3A9A400D1DD4B /* Info.plist */; };
+		7575BFCF1EE3A9A400D1DD4B /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFBB1EE3A9A400D1DD4B /* MJExtensionConst.m */; };
+		7575BFD01EE3A9A400D1DD4B /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFBD1EE3A9A400D1DD4B /* MJFoundation.m */; };
+		7575BFD11EE3A9A400D1DD4B /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFBF1EE3A9A400D1DD4B /* MJProperty.m */; };
+		7575BFD21EE3A9A400D1DD4B /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFC11EE3A9A400D1DD4B /* MJPropertyKey.m */; };
+		7575BFD31EE3A9A400D1DD4B /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFC31EE3A9A400D1DD4B /* MJPropertyType.m */; };
+		7575BFD41EE3A9A400D1DD4B /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFC51EE3A9A400D1DD4B /* NSObject+MJClass.m */; };
+		7575BFD51EE3A9A400D1DD4B /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFC71EE3A9A400D1DD4B /* NSObject+MJCoding.m */; };
+		7575BFD61EE3A9A400D1DD4B /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFC91EE3A9A400D1DD4B /* NSObject+MJKeyValue.m */; };
+		7575BFD71EE3A9A400D1DD4B /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFCB1EE3A9A400D1DD4B /* NSObject+MJProperty.m */; };
+		7575BFD81EE3A9A400D1DD4B /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFCD1EE3A9A400D1DD4B /* NSString+MJExtension.m */; };
+		7575BFDB1EE3AE5000D1DD4B /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7575BFDA1EE3AE5000D1DD4B /* NSObject+Extension.m */; };
 		75C07E541EE30C4400FE6C3A /* _QQ__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E521EE30C4400FE6C3A /* _QQ__.xcdatamodeld */; };
 		75C07E641EE30C4400FE6C3A /* _QQ__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E631EE30C4400FE6C3A /* _QQ__Tests.m */; };
 		75C07E6F1EE30C4400FE6C3A /* _QQ__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C07E6E1EE30C4400FE6C3A /* _QQ__UITests.m */; };
@@ -88,8 +103,38 @@
 		7575BF9B1EE397A800D1DD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		7575BF9D1EE397A800D1DD4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7575BFA61EE3986B00D1DD4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameAdjust.h"; sourceTree = "<group>"; };
-		7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameAdjust.m"; sourceTree = "<group>"; };
+		7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FrameAdjust.h"; path = "../../Tool/UIView+FrameAdjust.h"; sourceTree = "<group>"; };
+		7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FrameAdjust.m"; path = "../../Tool/UIView+FrameAdjust.m"; sourceTree = "<group>"; };
+		7575BFAD1EE3A3A200D1DD4B /* YYMusicTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMusicTool.h; sourceTree = "<group>"; };
+		7575BFAE1EE3A3A200D1DD4B /* YYMusicTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMusicTool.m; sourceTree = "<group>"; };
+		7575BFB01EE3A3B200D1DD4B /* YYAudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAudioTool.h; sourceTree = "<group>"; };
+		7575BFB11EE3A3B200D1DD4B /* YYAudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAudioTool.m; sourceTree = "<group>"; };
+		7575BFB31EE3A8D900D1DD4B /* YYMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMusic.h; sourceTree = "<group>"; };
+		7575BFB41EE3A8D900D1DD4B /* YYMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMusic.m; sourceTree = "<group>"; };
+		7575BFB81EE3A9A400D1DD4B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7575BFB91EE3A9A400D1DD4B /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		7575BFBA1EE3A9A400D1DD4B /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		7575BFBB1EE3A9A400D1DD4B /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		7575BFBC1EE3A9A400D1DD4B /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		7575BFBD1EE3A9A400D1DD4B /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		7575BFBE1EE3A9A400D1DD4B /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		7575BFBF1EE3A9A400D1DD4B /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		7575BFC01EE3A9A400D1DD4B /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		7575BFC11EE3A9A400D1DD4B /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		7575BFC21EE3A9A400D1DD4B /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		7575BFC31EE3A9A400D1DD4B /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		7575BFC41EE3A9A400D1DD4B /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		7575BFC51EE3A9A400D1DD4B /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		7575BFC61EE3A9A400D1DD4B /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		7575BFC71EE3A9A400D1DD4B /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		7575BFC81EE3A9A400D1DD4B /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		7575BFC91EE3A9A400D1DD4B /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		7575BFCA1EE3A9A400D1DD4B /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		7575BFCB1EE3A9A400D1DD4B /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		7575BFCC1EE3A9A400D1DD4B /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		7575BFCD1EE3A9A400D1DD4B /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		7575BFD91EE3AE5000D1DD4B /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		7575BFDA1EE3AE5000D1DD4B /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		75C07E431EE30C4400FE6C3A /* 仿QQ音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿QQ音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C07E531EE30C4400FE6C3A /* _QQ__.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _QQ__.xcdatamodel; sourceTree = "<group>"; };
 		75C07E5F1EE30C4400FE6C3A /* 仿QQ音乐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "仿QQ音乐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,10 +214,10 @@
 		7575BF8A1EE3972600D1DD4B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7575BF8F1EE3972600D1DD4B /* Tool */,
 				7575BF8B1EE3972600D1DD4B /* Controller */,
 				7575BF8C1EE3972600D1DD4B /* Model */,
 				7575BF8D1EE3972600D1DD4B /* Other */,
-				7575BF8F1EE3972600D1DD4B /* Tool */,
 				7575BF901EE3972600D1DD4B /* View */,
 			);
 			path = Classes;
@@ -190,6 +235,8 @@
 		7575BF8C1EE3972600D1DD4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7575BFB31EE3A8D900D1DD4B /* YYMusic.h */,
+				7575BFB41EE3A8D900D1DD4B /* YYMusic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +249,7 @@
 				7575BF961EE397A800D1DD4B /* Assets.xcassets */,
 				7575BF971EE397A800D1DD4B /* Base.lproj */,
 				7575BF9D1EE397A800D1DD4B /* main.m */,
+				7575BFB61EE3A99500D1DD4B /* Lab */,
 				7575BF8E1EE3972600D1DD4B /* Category */,
 			);
 			path = Other;
@@ -210,6 +258,10 @@
 		7575BF8E1EE3972600D1DD4B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */,
+				7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */,
+				7575BFD91EE3AE5000D1DD4B /* NSObject+Extension.h */,
+				7575BFDA1EE3AE5000D1DD4B /* NSObject+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -217,8 +269,10 @@
 		7575BF8F1EE3972600D1DD4B /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				7575BFA81EE398A600D1DD4B /* UIView+FrameAdjust.h */,
-				7575BFA91EE398A600D1DD4B /* UIView+FrameAdjust.m */,
+				7575BFAD1EE3A3A200D1DD4B /* YYMusicTool.h */,
+				7575BFAE1EE3A3A200D1DD4B /* YYMusicTool.m */,
+				7575BFB01EE3A3B200D1DD4B /* YYAudioTool.h */,
+				7575BFB11EE3A3B200D1DD4B /* YYAudioTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -237,6 +291,43 @@
 				7575BF9A1EE397A800D1DD4B /* Main.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		7575BFB61EE3A99500D1DD4B /* Lab */ = {
+			isa = PBXGroup;
+			children = (
+				7575BFB71EE3A9A400D1DD4B /* MJExtension */,
+			);
+			path = Lab;
+			sourceTree = "<group>";
+		};
+		7575BFB71EE3A9A400D1DD4B /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7575BFB81EE3A9A400D1DD4B /* Info.plist */,
+				7575BFB91EE3A9A400D1DD4B /* MJExtension.h */,
+				7575BFBA1EE3A9A400D1DD4B /* MJExtensionConst.h */,
+				7575BFBB1EE3A9A400D1DD4B /* MJExtensionConst.m */,
+				7575BFBC1EE3A9A400D1DD4B /* MJFoundation.h */,
+				7575BFBD1EE3A9A400D1DD4B /* MJFoundation.m */,
+				7575BFBE1EE3A9A400D1DD4B /* MJProperty.h */,
+				7575BFBF1EE3A9A400D1DD4B /* MJProperty.m */,
+				7575BFC01EE3A9A400D1DD4B /* MJPropertyKey.h */,
+				7575BFC11EE3A9A400D1DD4B /* MJPropertyKey.m */,
+				7575BFC21EE3A9A400D1DD4B /* MJPropertyType.h */,
+				7575BFC31EE3A9A400D1DD4B /* MJPropertyType.m */,
+				7575BFC41EE3A9A400D1DD4B /* NSObject+MJClass.h */,
+				7575BFC51EE3A9A400D1DD4B /* NSObject+MJClass.m */,
+				7575BFC61EE3A9A400D1DD4B /* NSObject+MJCoding.h */,
+				7575BFC71EE3A9A400D1DD4B /* NSObject+MJCoding.m */,
+				7575BFC81EE3A9A400D1DD4B /* NSObject+MJKeyValue.h */,
+				7575BFC91EE3A9A400D1DD4B /* NSObject+MJKeyValue.m */,
+				7575BFCA1EE3A9A400D1DD4B /* NSObject+MJProperty.h */,
+				7575BFCB1EE3A9A400D1DD4B /* NSObject+MJProperty.m */,
+				7575BFCC1EE3A9A400D1DD4B /* NSString+MJExtension.h */,
+				7575BFCD1EE3A9A400D1DD4B /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		75C07E3A1EE30C4400FE6C3A = {
@@ -487,6 +578,7 @@
 				75C07ED51EE30DEC00FE6C3A /* Musics.plist in Resources */,
 				75C07ECC1EE30DEC00FE6C3A /* 10736444.mp3 in Resources */,
 				75C07EB41EE30DEC00FE6C3A /* jay_icon@2x.png in Resources */,
+				7575BFCE1EE3A9A400D1DD4B /* Info.plist in Resources */,
 				75C07ED01EE30DEC00FE6C3A /* 14945107.mp3 in Resources */,
 				75C07EAE1EE30DEC00FE6C3A /* bb_icon@2x.jpg in Resources */,
 				75C07EC11EE30DEC00FE6C3A /* 10405520.lrc in Resources */,
@@ -546,11 +638,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7575BFD61EE3A9A400D1DD4B /* NSObject+MJKeyValue.m in Sources */,
+				7575BFD31EE3A9A400D1DD4B /* MJPropertyType.m in Sources */,
 				75C07E541EE30C4400FE6C3A /* _QQ__.xcdatamodeld in Sources */,
+				7575BFCF1EE3A9A400D1DD4B /* MJExtensionConst.m in Sources */,
+				7575BFB21EE3A3B200D1DD4B /* YYAudioTool.m in Sources */,
+				7575BFD01EE3A9A400D1DD4B /* MJFoundation.m in Sources */,
+				7575BFD41EE3A9A400D1DD4B /* NSObject+MJClass.m in Sources */,
 				7575BFAA1EE398A600D1DD4B /* UIView+FrameAdjust.m in Sources */,
+				7575BFD81EE3A9A400D1DD4B /* NSString+MJExtension.m in Sources */,
 				7575BF931EE3975200D1DD4B /* YYPlayingViewController.m in Sources */,
+				7575BFAF1EE3A3A200D1DD4B /* YYMusicTool.m in Sources */,
+				7575BFD21EE3A9A400D1DD4B /* MJPropertyKey.m in Sources */,
 				7575BFA31EE397A800D1DD4B /* main.m in Sources */,
 				7575BF9E1EE397A800D1DD4B /* AppDelegate.m in Sources */,
+				7575BFD71EE3A9A400D1DD4B /* NSObject+MJProperty.m in Sources */,
+				7575BFB51EE3A8D900D1DD4B /* YYMusic.m in Sources */,
+				7575BFD11EE3A9A400D1DD4B /* MJProperty.m in Sources */,
+				7575BFDB1EE3AE5000D1DD4B /* NSObject+Extension.m in Sources */,
+				7575BFD51EE3A9A400D1DD4B /* NSObject+MJCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
