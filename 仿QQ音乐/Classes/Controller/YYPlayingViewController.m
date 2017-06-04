@@ -90,10 +90,38 @@
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
     
     // iconView动画
-    [self iconViewAnimation];
+    [self startIconViewAnimation];
+    
+    // 添加定时器更新进度信息
+    [self updateProgressInfo];
+    [self removeProgressTimer];
+    [self addProgressTimer];
 }
 
-- (void)iconViewAnimation
+#pragma mark - 定时器操作
+- (void)addProgressTimer
+{
+    self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.progressTimer forMode:NSRunLoopCommonModes];
+}
+
+- (void)removeProgressTimer
+{
+    [self.progressTimer invalidate];
+    self.progressTimer = nil;
+}
+
+// 更新进度信息
+- (void)updateProgressInfo
+{
+    // 播放时间
+    self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
+    
+    // 进度条
+    self.progressSlider.value = self.currentPlayer.currentTime / self.currentPlayer.duration;
+}
+
+- (void)startIconViewAnimation
 {
     CABasicAnimation *rotationAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnim.fromValue = @(0);
@@ -104,7 +132,7 @@
     [self.iconView.layer addAnimation:rotationAnim forKey:nil];
 }
 
-#pragma mark - 切换和暂停歌曲
+#pragma mark - 切换和暂停歌曲操作
 - (IBAction)playOrPause:(UIButton *)playButton {
     
     if (self.currentPlayer.isPlaying)
