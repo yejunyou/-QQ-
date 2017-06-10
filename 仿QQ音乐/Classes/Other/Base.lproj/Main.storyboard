@@ -110,6 +110,12 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-6l-OZx">
                                         <rect key="frame" x="48" y="6" width="279" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.14901960784313725" green="0.73333333333333328" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="sliderTouchDown" destination="BYZ-38-t0r" eventType="touchDown" id="Rqi-VX-YIL"/>
+                                            <action selector="sliderTouchEnd" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fV-dF-Rzb"/>
+                                            <action selector="sliderValueChange" destination="BYZ-38-t0r" eventType="valueChanged" id="wuw-GH-k7Q"/>
+                                            <outletCollection property="gestureRecognizers" destination="NAg-Kr-Hd2" appends="YES" id="W0k-P2-kO0"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqD-26-yQz">
                                         <rect key="frame" x="0.0" y="6" width="50" height="17"/>
@@ -215,6 +221,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NAg-Kr-Hd2">
+                    <connections>
+                        <action selector="sliderTap:" destination="BYZ-38-t0r" id="RFV-Ao-F0f"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>

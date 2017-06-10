@@ -42,6 +42,13 @@
 /* 播放器 */
 @property (nonatomic, strong) AVAudioPlayer *currentPlayer;
 
+#pragma mark - slider事件
+- (IBAction)sliderTouchDown;
+- (IBAction)sliderValueChange;
+- (IBAction)sliderTouchEnd;
+- (IBAction)sliderTap:(UITapGestureRecognizer *)sender;
+
+
 @end
 
 @implementation YYPlayingViewController
@@ -54,6 +61,8 @@
     
     // 播放音乐
     [self startPlayingMusic];
+    
+    
 }
 
 
@@ -98,7 +107,7 @@
     [self addProgressTimer];
 }
 
-#pragma mark - 定时器操作
+#pragma mark - 进度定时器操作
 - (void)addProgressTimer
 {
     self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateProgressInfo) userInfo:nil repeats:YES];
@@ -170,5 +179,36 @@
     
     // 跟新界面信息
     [self startPlayingMusic];
+}
+
+#pragma mark - slider事件
+- (IBAction)sliderTouchDown {
+    // 暂停定时器
+    [self removeProgressTimer];
+}
+
+- (IBAction)sliderValueChange {
+    // 更新当前播放时间
+    self.currentTimeLabel.text = [NSString stringWithTime:self.progressSlider.value * self.currentPlayer.duration];
+}
+
+- (IBAction)sliderTouchEnd {
+    // 播放当前时间歌曲
+    self.currentPlayer.currentTime = self.progressSlider.value * self.currentPlayer.duration;
+    
+    // 恢复定时器
+    [self addProgressTimer];
+}
+
+- (IBAction)sliderTap:(UITapGestureRecognizer *)sender {
+    // 获取点击位置
+    CGPoint point = [sender locationInView:self.progressSlider];
+    CGFloat ratio = point.x / self.progressSlider.bounds.size.width;
+    
+    // 更该当前播放时间
+    self.currentPlayer.currentTime = ratio * self.currentPlayer.duration;
+    
+    // 更新进度信息
+    [self updateProgressInfo];
 }
 @end
