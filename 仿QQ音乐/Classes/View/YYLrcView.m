@@ -8,10 +8,16 @@
 
 #import "YYLrcView.h"
 #import "Masonry.h"
+#import "YYLrcCell.h"
+#import "YYLrcLabel.h"
+#import "YYLrcLineTool.h"
+#import "YYLrcLine.h"
 
 @interface YYLrcView ()<UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *lrcList; // 歌词
 
 @end
 
@@ -62,21 +68,26 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.lrcList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"aoghaogh%zd",indexPath.row];
+    YYLrcCell *cell = [YYLrcCell lrcCellWithTableView:tableView];
+    
+    YYLrcLine *line = self.lrcList[indexPath.row];
+    cell.lrcLabel.text = line.text;
     return cell;
+}
+
+#pragma mark - 重写setLrcName方法
+- (void)setLrcName:(NSString *)lrcName
+{
+    _lrcName = [lrcName copy];
+    
+    self.lrcList = [YYLrcLineTool lrcLineToolWithLrcName:lrcName];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - setting and getting

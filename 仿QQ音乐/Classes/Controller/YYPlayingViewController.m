@@ -14,6 +14,7 @@
 #import "YYAudioTool.h"
 #import "NSObject+Extension.h"
 #import "CALayer+PauseAimate.h"
+#import "YYLrcView.h"
 
 #define YYRGBA(A,B,C,a) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:a]
 #define YYRGB(A,B,C)   YYRGBA(A,B,C,1.0)
@@ -27,12 +28,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lrcLabel;
 
 /* 播放或暂停按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *playOrPauseBtn;
 
 /* 歌词视图 */
-@property (weak, nonatomic) IBOutlet UIScrollView *lrcView;
+@property (weak, nonatomic) IBOutlet YYLrcView *lrcView;
 
 /* 进度条的Timer */
 @property (nonatomic, strong) NSTimer *progressTimer;
@@ -88,7 +90,7 @@
     // 当前正在播放的音乐
     YYMusic *playingMusic = [YYMusicTool playingMusic];
     
-    // 更新歌曲信息
+    // 更新歌曲界面信息
     self.albunView.image = [UIImage imageNamed:playingMusic.icon];
     self.iconView.image = [UIImage imageNamed:playingMusic.icon];
     self.songLabel.text = playingMusic.name;
@@ -99,6 +101,10 @@
     self.currentPlayer = [YYAudioTool playMusicWithName:playingMusic.filename];
     self.totalTimeLabel.text = [NSString stringWithTime:self.currentPlayer.duration];
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
+    self.playOrPauseBtn.selected = self.currentPlayer.isPlaying;
+    
+    // 设置歌词
+    self.lrcView.lrcName = playingMusic.lrcname;
     
     // iconView动画
     [self startIconViewAnimation];
@@ -222,5 +228,6 @@
 {
     CGFloat ratio = self.lrcView.contentOffset.x / self.lrcView.width;
     self.iconView.alpha = 1 - ratio;
+    self.lrcLabel.alpha = 1 - ratio;
 }
 @end

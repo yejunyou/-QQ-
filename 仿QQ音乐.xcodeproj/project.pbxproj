@@ -86,6 +86,10 @@
 		75E18D0D1EEB9ADC001A2115 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D011EEB9ADC001A2115 /* View+MASAdditions.m */; };
 		75E18D0E1EEB9ADC001A2115 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D041EEB9ADC001A2115 /* ViewController+MASAdditions.m */; };
 		75E18D111EEB9C23001A2115 /* CALayer+PauseAimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D101EEB9C23001A2115 /* CALayer+PauseAimate.m */; };
+		75E18D141EEBDB43001A2115 /* YYLrcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D131EEBDB43001A2115 /* YYLrcCell.m */; };
+		75E18D171EEBDB4E001A2115 /* YYLrcLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D161EEBDB4E001A2115 /* YYLrcLabel.m */; };
+		75E18D1A1EEBDD84001A2115 /* YYLrcLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D191EEBDD84001A2115 /* YYLrcLine.m */; };
+		75E18D1D1EEBE0F7001A2115 /* YYLrcLineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E18D1C1EEBE0F7001A2115 /* YYLrcLineTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +229,14 @@
 		75E18D041EEB9ADC001A2115 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		75E18D0F1EEB9C23001A2115 /* CALayer+PauseAimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+PauseAimate.h"; sourceTree = "<group>"; };
 		75E18D101EEB9C23001A2115 /* CALayer+PauseAimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+PauseAimate.m"; sourceTree = "<group>"; };
+		75E18D121EEBDB43001A2115 /* YYLrcCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLrcCell.h; sourceTree = "<group>"; };
+		75E18D131EEBDB43001A2115 /* YYLrcCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLrcCell.m; sourceTree = "<group>"; };
+		75E18D151EEBDB4E001A2115 /* YYLrcLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLrcLabel.h; sourceTree = "<group>"; };
+		75E18D161EEBDB4E001A2115 /* YYLrcLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLrcLabel.m; sourceTree = "<group>"; };
+		75E18D181EEBDD84001A2115 /* YYLrcLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLrcLine.h; sourceTree = "<group>"; };
+		75E18D191EEBDD84001A2115 /* YYLrcLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLrcLine.m; sourceTree = "<group>"; };
+		75E18D1B1EEBE0F7001A2115 /* YYLrcLineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLrcLineTool.h; sourceTree = "<group>"; };
+		75E18D1C1EEBE0F7001A2115 /* YYLrcLineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLrcLineTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +290,8 @@
 			children = (
 				7575BFB31EE3A8D900D1DD4B /* YYMusic.h */,
 				7575BFB41EE3A8D900D1DD4B /* YYMusic.m */,
+				75E18D181EEBDD84001A2115 /* YYLrcLine.h */,
+				75E18D191EEBDD84001A2115 /* YYLrcLine.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +330,8 @@
 				7575BFAE1EE3A3A200D1DD4B /* YYMusicTool.m */,
 				7575BFB01EE3A3B200D1DD4B /* YYAudioTool.h */,
 				7575BFB11EE3A3B200D1DD4B /* YYAudioTool.m */,
+				75E18D1B1EEBE0F7001A2115 /* YYLrcLineTool.h */,
+				75E18D1C1EEBE0F7001A2115 /* YYLrcLineTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -325,6 +341,10 @@
 			children = (
 				75E18CE81EEB9AA7001A2115 /* YYLrcView.h */,
 				75E18CE91EEB9AA7001A2115 /* YYLrcView.m */,
+				75E18D121EEBDB43001A2115 /* YYLrcCell.h */,
+				75E18D131EEBDB43001A2115 /* YYLrcCell.m */,
+				75E18D151EEBDB4E001A2115 /* YYLrcLabel.h */,
+				75E18D161EEBDB4E001A2115 /* YYLrcLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -731,7 +751,9 @@
 				75E18D071EEB9ADC001A2115 /* MASConstraintMaker.m in Sources */,
 				75E18D0D1EEB9ADC001A2115 /* View+MASAdditions.m in Sources */,
 				75E18D0A1EEB9ADC001A2115 /* MASViewConstraint.m in Sources */,
+				75E18D171EEBDB4E001A2115 /* YYLrcLabel.m in Sources */,
 				75E18D051EEB9ADC001A2115 /* MASCompositeConstraint.m in Sources */,
+				75E18D1A1EEBDD84001A2115 /* YYLrcLine.m in Sources */,
 				7575BF931EE3975200D1DD4B /* YYPlayingViewController.m in Sources */,
 				7575BFAF1EE3A3A200D1DD4B /* YYMusicTool.m in Sources */,
 				7575BFD21EE3A9A400D1DD4B /* MJPropertyKey.m in Sources */,
@@ -741,9 +763,11 @@
 				7575BFD71EE3A9A400D1DD4B /* NSObject+MJProperty.m in Sources */,
 				7575BFB51EE3A8D900D1DD4B /* YYMusic.m in Sources */,
 				75E18D0C1EEB9ADC001A2115 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				75E18D141EEBDB43001A2115 /* YYLrcCell.m in Sources */,
 				75E18D0B1EEB9ADC001A2115 /* NSArray+MASAdditions.m in Sources */,
 				75E18D111EEB9C23001A2115 /* CALayer+PauseAimate.m in Sources */,
 				75E18D0E1EEB9ADC001A2115 /* ViewController+MASAdditions.m in Sources */,
+				75E18D1D1EEBE0F7001A2115 /* YYLrcLineTool.m in Sources */,
 				7575BFD11EE3A9A400D1DD4B /* MJProperty.m in Sources */,
 				7575BFDB1EE3AE5000D1DD4B /* NSObject+Extension.m in Sources */,
 				7575BFD51EE3A9A400D1DD4B /* NSObject+MJCoding.m in Sources */,
@@ -895,6 +919,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEVELOPMENT_TEAM = CZD89388LH;
 				EXECUTABLE_PREFIX = "";
 				GCC_PREFIX_HEADER = "";
@@ -909,6 +935,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = CZD89388LH;
 				EXECUTABLE_PREFIX = "";
 				GCC_PREFIX_HEADER = "";

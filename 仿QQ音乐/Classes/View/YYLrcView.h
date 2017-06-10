@@ -10,5 +10,6 @@
 
 @interface YYLrcView : UIScrollView
 
+@property (nonatomic, copy) NSString *lrcName; 
 
 @end

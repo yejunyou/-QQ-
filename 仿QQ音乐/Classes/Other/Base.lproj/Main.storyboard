@@ -215,6 +215,7 @@
                         <outlet property="albunView" destination="9Vl-me-AVa" id="ng5-rI-N7M"/>
                         <outlet property="currentTimeLabel" destination="fqD-26-yQz" id="2GU-hE-N3D"/>
                         <outlet property="iconView" destination="icU-qT-nJ2" id="46N-Ym-IlV"/>
+                        <outlet property="lrcLabel" destination="IRI-cr-7T4" id="N7K-hp-16W"/>
                         <outlet property="lrcView" destination="Zws-Rm-kSo" id="7p0-Sq-4Am"/>
                         <outlet property="playOrPauseBtn" destination="MMn-PN-DaO" id="XXq-vV-4W1"/>
                         <outlet property="progressSlider" destination="tjT-6l-OZx" id="7YV-Dk-MQr"/>
