@@ -171,15 +171,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zws-Rm-kSo">
-                                <rect key="frame" x="0.0" y="120" width="375" height="397"/>
-                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lkq.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="icU-qT-nJ2" userLabel="Icon View">
                                 <rect key="frame" x="20.5" y="136" width="334" height="334"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="icU-qT-nJ2" secondAttribute="height" multiplier="1:1" id="D5O-5n-mAa"/>
                                 </constraints>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zws-Rm-kSo" customClass="YYLrcView">
+                                <rect key="frame" x="0.0" y="120" width="375" height="397"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1dh-RY-qny"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

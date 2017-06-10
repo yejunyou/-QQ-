@@ -54,6 +54,9 @@
         make.height.equalTo(self.mas_height);
         make.width.equalTo(self.mas_width);
     }];
+    
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorColor = [UIColor clearColor];
 }
 
 #pragma mark - UITableViewDataSource
@@ -81,7 +84,6 @@
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] init];
-        _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

@@ -13,11 +13,12 @@
 #import "YYMusic.h"
 #import "YYAudioTool.h"
 #import "NSObject+Extension.h"
+#import "CALayer+PauseAimate.h"
 
 #define YYRGBA(A,B,C,a) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:a]
 #define YYRGB(A,B,C)   YYRGBA(A,B,C,1.0)
 
-@interface YYPlayingViewController ()
+@interface YYPlayingViewController ()<UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *albunView;
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
@@ -62,7 +63,8 @@
     // 播放音乐
     [self startPlayingMusic];
     
-    
+    // 设置内容尺寸
+    self.lrcView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
 }
 
 
@@ -128,6 +130,7 @@
     
     // 进度条
     self.progressSlider.value = self.currentPlayer.currentTime / self.currentPlayer.duration;
+    
 }
 
 - (void)startIconViewAnimation
@@ -150,6 +153,7 @@
         
         // 暂停
         [self.currentPlayer pause];
+        [self.iconView.layer pauseAnimate];
     }
     else
     {
@@ -157,6 +161,7 @@
         
         // 播放
         [self.currentPlayer play];
+        [self.iconView.layer resumeAnimate];
     }
 }
 
@@ -210,5 +215,12 @@
     
     // 更新进度信息
     [self updateProgressInfo];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat ratio = self.lrcView.contentOffset.x / self.lrcView.width;
+    self.iconView.alpha = 1 - ratio;
 }
 @end
