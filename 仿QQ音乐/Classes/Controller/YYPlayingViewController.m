@@ -111,8 +111,11 @@
     
     // 添加定时器更新进度信息
     [self updateProgressInfo];
+    
     [self removeProgressTimer];
     [self addProgressTimer];
+    [self removeLrcTimer];
+    [self addLrcTimer];
 }
 
 #pragma mark - 进度定时器操作
@@ -139,6 +142,25 @@
     
 }
 
+#pragma mark - 歌词定时器
+- (void)addLrcTimer
+{
+    self.lrcTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateLrcProgress)];
+    [self.lrcTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+- (void)removeLrcTimer
+{
+    [self.lrcTimer invalidate];
+    self.lrcTimer  = nil;
+}
+
+- (void)updateLrcProgress
+{
+    self.lrcView.currentTime = self.currentPlayer.currentTime;
+}
+
+#pragma mark - 歌手动画
 - (void)startIconViewAnimation
 {
     CABasicAnimation *rotationAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];

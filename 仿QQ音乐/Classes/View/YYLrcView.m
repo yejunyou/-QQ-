@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSArray *lrcList; // 歌词
 
+@property (nonatomic, assign) NSInteger currentIndex; // 正在播放的歌词所在行数
+
 @end
 
 @implementation YYLrcView
@@ -63,6 +65,7 @@
     
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.contentInset = UIEdgeInsetsMake(self.bounds.size.height * 0.5, 0, self.bounds.size.height * 0.5, 0);
 }
 
 #pragma mark - UITableViewDataSource
@@ -75,6 +78,13 @@
 {
     YYLrcCell *cell = [YYLrcCell lrcCellWithTableView:tableView];
     
+    if (self.currentIndex == indexPath.row) {
+        cell.lrcLabel.font = [UIFont systemFontOfSize:20];
+    }else{
+        cell.lrcLabel.font = [UIFont systemFontOfSize:14];
+        cell.lrcLabel.progress = 0;
+    }
+
     YYLrcLine *line = self.lrcList[indexPath.row];
     cell.lrcLabel.text = line.text;
     return cell;
@@ -83,11 +93,60 @@
 #pragma mark - 重写setLrcName方法
 - (void)setLrcName:(NSString *)lrcName
 {
+    self.currentIndex = 0;
+    
     _lrcName = [lrcName copy];
     
     self.lrcList = [YYLrcLineTool lrcLineToolWithLrcName:lrcName];
     
     [self.tableView reloadData];
+}
+
+#pragma mark - 重写setcurrentTime方法
+- (void)setCurrentTime:(NSTimeInterval)currentTime
+{
+    _currentTime = currentTime;
+    
+    // 匹配当前时间和对应歌词
+    NSInteger count = self.lrcList.count;
+    for (NSInteger i = 0; i < count; i ++)
+    {
+        // 获取i位置的歌词
+        YYLrcLine *currentLrcLine = self.lrcList[i];
+        
+        // 获取下一句歌词
+        NSInteger nextIndex = i + 1;
+        YYLrcLine *nextLrcLine = (nextIndex < count) ? self.lrcList[nextIndex] : nil;
+        
+        // 显示当前歌词（判断条件：当前时间在 i 位置歌词和 i + 1 位置歌词的时间区间内）
+        if (self.currentIndex != i && currentTime >= currentLrcLine.time && currentTime < nextLrcLine.time)
+        {
+            // 刷新当前行和上一行
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath,previousIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            
+            // 记录当前索引
+            self.currentIndex = i;
+            
+            // 定位到对应的歌词
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            
+            // 更新歌手下方的歌词
+            self.lrcLabel.text = currentLrcLine.text;
+            
+        }
+        
+        // 依据进度更新歌词颜色
+        if (self.currentIndex == i)
+        {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            CGFloat progress = (currentTime - currentLrcLine.time) / (nextLrcLine.time - currentLrcLine.time);
+            YYLrcCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            cell.lrcLabel.progress = progress;
+            self.lrcLabel.progress = progress;
+        }
+    }
 }
 
 #pragma mark - setting and getting

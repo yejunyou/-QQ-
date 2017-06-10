@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class YYLrcLabel;
 @interface YYLrcView : UIScrollView
 
-@property (nonatomic, copy) NSString *lrcName; 
+@property (nonatomic, copy) NSString *lrcName;
 
+@property (nonatomic, assign) NSTimeInterval currentTime;
+
+@property (nonatomic, weak) YYLrcLabel *lrcLabel; 
 @end

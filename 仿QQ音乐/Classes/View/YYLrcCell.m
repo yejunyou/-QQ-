@@ -19,8 +19,9 @@
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:14];
+        label.translatesAutoresizingMaskIntoConstraints = NO;
         [self.contentView addSubview:label];
-        self.lrcLabel = label;
+        _lrcLabel = label;
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.contentView);
         }];
@@ -36,7 +37,6 @@
         cell = [[YYLrcCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.backgroundColor = [UIColor clearColor];
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
     return cell;
 }

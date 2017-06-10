@@ -10,4 +10,5 @@
 
 @interface YYLrcLabel : UILabel
 
+@property (nonatomic, assign) CGFloat progress; 
 @end
