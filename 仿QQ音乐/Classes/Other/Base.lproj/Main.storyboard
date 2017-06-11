@@ -162,7 +162,7 @@
                                     <constraint firstAttribute="trailing" secondItem="JOR-bf-8lf" secondAttribute="trailing" id="z59-Mn-MFn"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-cr-7T4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="歌词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-cr-7T4" customClass="YYLrcLabel">
                                 <rect key="frame" x="172.5" y="500" width="31" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="o2Z-M5-uAC"/>

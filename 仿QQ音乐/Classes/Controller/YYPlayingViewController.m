@@ -15,6 +15,7 @@
 #import "NSObject+Extension.h"
 #import "CALayer+PauseAimate.h"
 #import "YYLrcView.h"
+#import "YYLrcLabel.h"
 
 #define YYRGBA(A,B,C,a) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:a]
 #define YYRGB(A,B,C)   YYRGBA(A,B,C,1.0)
@@ -28,7 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *singerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *lrcLabel;
+@property (weak, nonatomic) IBOutlet YYLrcLabel *lrcLabel;
 
 /* 播放或暂停按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *playOrPauseBtn;
@@ -67,6 +68,7 @@
     
     // 设置内容尺寸
     self.lrcView.contentSize = CGSizeMake(self.view.bounds.size.width * 2, 0);
+    self.lrcView.lrcLabel = self.lrcLabel;
 }
 
 
@@ -87,6 +89,8 @@
 #pragma mark - 开始播放音乐
 - (void)startPlayingMusic
 {
+    self.lrcLabel.text = @"";
+    
     // 当前正在播放的音乐
     YYMusic *playingMusic = [YYMusicTool playingMusic];
     

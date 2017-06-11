@@ -124,17 +124,16 @@
             // 刷新当前行和上一行
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             NSIndexPath *previousIndexPath = [NSIndexPath indexPathForRow:self.currentIndex inSection:0];
+            self.currentIndex = i; // 在刷新前更新索引
             [self.tableView reloadRowsAtIndexPaths:@[indexPath,previousIndexPath] withRowAnimation:UITableViewRowAnimationNone];
             
             // 记录当前索引
-            self.currentIndex = i;
             
             // 定位到对应的歌词
             [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
             
             // 更新歌手下方的歌词
             self.lrcLabel.text = currentLrcLine.text;
-            
         }
         
         // 依据进度更新歌词颜色
