@@ -16,6 +16,7 @@
 #import "CALayer+PauseAimate.h"
 #import "YYLrcView.h"
 #import "YYLrcLabel.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 #define YYRGBA(A,B,C,a) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:a]
 #define YYRGB(A,B,C)   YYRGBA(A,B,C,1.0)
@@ -121,6 +122,8 @@
     [self addProgressTimer];
     [self removeLrcTimer];
     [self addLrcTimer];
+    
+    [self setupLockScreenInfo];
 }
 
 #pragma mark - 进度定时器操作
@@ -251,6 +254,31 @@
     [self updateProgressInfo];
 }
 
+#pragma mark - 设置界面锁屏信息
+
+- (void)setupLockScreenInfo
+{
+    // 获取当前播放歌曲
+    YYMusic *playingMusic = [YYMusicTool playingMusic];
+    
+    // 获取锁屏界面信息
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    
+    // 设置锁屏展示信息
+    NSMutableDictionary *playingInfo = [NSMutableDictionary dictionary];
+    [playingInfo setObject:playingMusic.name forKey:MPMediaItemPropertyAlbumTitle]; // 歌曲名字
+    [playingInfo setObject:playingMusic.singer forKey:MPMediaItemPropertyArtist];   // 歌手画像
+    
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:playingMusic.icon]];
+    [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
+    [playingInfo setObject:@(self.currentPlayer.duration) forKey:MPMediaItemPropertyPlaybackDuration];
+    
+    center.nowPlayingInfo = playingInfo;
+    
+    // 设置应用为可接受远程事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+}
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -263,5 +291,40 @@
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
     if (flag) [self next];
+}
+
+#pragma mark - 处理远程事件
+/*
+ 
+ UIEventSubtypeRemoteControlPlay                 = 100,
+ UIEventSubtypeRemoteControlPause                = 101,
+ UIEventSubtypeRemoteControlStop                 = 102,
+ UIEventSubtypeRemoteControlTogglePlayPause      = 103,
+ UIEventSubtypeRemoteControlNextTrack            = 104,
+ UIEventSubtypeRemoteControlPreviousTrack        = 105,
+ UIEventSubtypeRemoteControlBeginSeekingBackward = 106,
+ UIEventSubtypeRemoteControlEndSeekingBackward   = 107,
+ UIEventSubtypeRemoteControlBeginSeekingForward  = 108,
+ UIEventSubtypeRemoteControlEndSeekingForward    = 109,
+ */
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    switch (event.subtype) {
+        case UIEventSubtypeRemoteControlPlay:
+        case UIEventSubtypeRemoteControlPause:
+            [self playOrPause:self.playOrPauseBtn];
+            break;
+            
+        case UIEventSubtypeRemoteControlNextTrack:
+            [self next];
+            break;
+            
+        case UIEventSubtypeRemoteControlPreviousTrack:
+            [self previous];
+            break;
+            
+        default:
+            break;
+    }
 }
 @end
