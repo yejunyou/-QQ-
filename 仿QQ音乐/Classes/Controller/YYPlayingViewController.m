@@ -123,7 +123,7 @@
     [self removeLrcTimer];
     [self addLrcTimer];
     
-    [self setupLockScreenInfo];
+//    [self setupLockScreenInfo];
 }
 
 #pragma mark - 进度定时器操作
@@ -166,6 +166,7 @@
 - (void)updateLrcProgress
 {
     self.lrcView.currentTime = self.currentPlayer.currentTime;
+    self.lrcView.duration = self.currentPlayer.duration;
 }
 
 #pragma mark - 歌手动画
@@ -254,6 +255,7 @@
     [self updateProgressInfo];
 }
 
+/*
 #pragma mark - 设置界面锁屏信息
 
 - (void)setupLockScreenInfo
@@ -278,6 +280,7 @@
     // 设置应用为可接受远程事件
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
+*/
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

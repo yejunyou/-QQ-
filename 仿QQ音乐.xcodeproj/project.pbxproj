@@ -925,6 +925,7 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "仿QQ音乐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Future-Version.-QQ--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -940,6 +941,7 @@
 				EXECUTABLE_PREFIX = "";
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "仿QQ音乐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Future-Version.-QQ--";
 				PRODUCT_NAME = "$(TARGET_NAME)";

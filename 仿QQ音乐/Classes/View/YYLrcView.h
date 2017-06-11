@@ -15,5 +15,7 @@
 
 @property (nonatomic, assign) NSTimeInterval currentTime;
 
+@property (nonatomic, assign) NSTimeInterval duration; 
+
 @property (nonatomic, weak) YYLrcLabel *lrcLabel; 
 @end

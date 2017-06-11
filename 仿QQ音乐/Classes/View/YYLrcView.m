@@ -12,6 +12,9 @@
 #import "YYLrcLabel.h"
 #import "YYLrcLineTool.h"
 #import "YYLrcLine.h"
+#import "YYMusic.h"
+#import "YYMusicTool.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface YYLrcView ()<UITableViewDataSource>
 
@@ -134,6 +137,9 @@
             
             // 更新歌手下方的歌词
             self.lrcLabel.text = currentLrcLine.text;
+            
+            // 生成锁屏界面
+            [self generatorLockImage];
         }
         
         // 依据进度更新歌词颜色
@@ -160,4 +166,69 @@
     }
     return _tableView;
 }
+
+#pragma mark - 生成锁屏信息
+- (void)generatorLockImage
+{
+    // 获取当前歌曲图片
+    YYMusic *playingMusic = [YYMusicTool playingMusic];
+    UIImage *currentImage = [UIImage imageNamed:playingMusic.icon];
+    
+    // 获取三句歌词
+    YYLrcLine *currentLine = self.lrcList[self.currentIndex];
+    YYLrcLine *previousLine = (self.currentIndex >= 1) ? self.lrcList[self.currentIndex - 1] : nil;
+    YYLrcLine *nextLine = (self.currentIndex < self.lrcList.count - 1) ? self.lrcList[self.currentIndex + 1] : nil;
+    
+    // 生成水印图片
+    UIGraphicsBeginImageContext(currentImage.size);
+    [currentImage drawAtPoint:CGPointZero];
+    CGFloat titleH = 25;
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.alignment = NSTextAlignmentCenter;
+    NSDictionary *attr1 = @{NSFontAttributeName : [UIFont systemFontOfSize:14],
+                            NSForegroundColorAttributeName:[UIColor lightGrayColor],
+                            NSParagraphStyleAttributeName: style};
+    NSDictionary *attr2 = @{NSFontAttributeName : [UIFont systemFontOfSize:16],
+                            NSForegroundColorAttributeName:[UIColor whiteColor],
+                            NSParagraphStyleAttributeName: style};
+    
+    [previousLine.text  drawInRect:CGRectMake(0, currentImage.size.height - titleH * 3, currentImage.size.width, titleH) withAttributes:attr1];
+    [currentLine.text   drawInRect:CGRectMake(0, currentImage.size.height - titleH * 2, currentImage.size.width, titleH) withAttributes:attr2];
+    [nextLine.text      drawInRect:CGRectMake(0, currentImage.size.height - titleH * 1, currentImage.size.width, titleH) withAttributes:attr1];
+    
+    UIImage *lockImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 设置锁屏信息
+    [self setupLockScreenInfoWithImg:lockImage];
+    
+    // 关闭
+    UIGraphicsEndImageContext();
+}
+
+#pragma mark - 设置界面锁屏信息
+
+- (void)setupLockScreenInfoWithImg:(UIImage *)image
+{
+    // 获取当前播放歌曲
+    YYMusic *playingMusic = [YYMusicTool playingMusic];
+    
+    // 获取锁屏界面信息
+    MPNowPlayingInfoCenter *center = [MPNowPlayingInfoCenter defaultCenter];
+    
+    // 设置锁屏展示信息
+    NSMutableDictionary *playingInfo = [NSMutableDictionary dictionary];
+    [playingInfo setObject:playingMusic.name forKey:MPMediaItemPropertyAlbumTitle]; // 歌曲名字
+    [playingInfo setObject:playingMusic.singer forKey:MPMediaItemPropertyArtist];   // 歌手画像
+    
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithImage:image];
+    [playingInfo setObject:artWork forKey:MPMediaItemPropertyArtwork];
+    [playingInfo setObject:@(self.duration) forKey:MPMediaItemPropertyPlaybackDuration];
+    [playingInfo setObject:@(self.currentTime) forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime];
+    
+    center.nowPlayingInfo = playingInfo;
+    
+    // 设置应用为可接受远程事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+}
+
 @end
