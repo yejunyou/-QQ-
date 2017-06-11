@@ -179,22 +179,23 @@
 
 #pragma mark - 切换和暂停歌曲操作
 - (IBAction)playOrPause:(UIButton *)playButton {
+    playButton.selected = !playButton.isSelected;
     
     if (self.currentPlayer.isPlaying)
     {
-        playButton.selected = !playButton.isSelected;
-        
         // 暂停
         [self.currentPlayer pause];
         [self.iconView.layer pauseAnimate];
+        [self removeProgressTimer];
+        [self removeLrcTimer];
     }
     else
     {
-        playButton.selected = !playButton.isSelected;
-        
         // 播放
         [self.currentPlayer play];
         [self.iconView.layer resumeAnimate];
+        [self addProgressTimer];
+        [self addLrcTimer];
     }
 }
 

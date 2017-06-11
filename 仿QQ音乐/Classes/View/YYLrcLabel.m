@@ -26,6 +26,7 @@
     [super drawRect:rect];
     
     CGRect fillRect = CGRectMake(0, 0, self.progress * self.bounds.size.width, self.bounds.size.height);
+//    CGRect fillRect = CGRectMake(self.progress * self.bounds.size.width-self.bounds.size.height, 0, self.progress * self.bounds.size.width, self.bounds.size.height);
     
     [[UIColor colorWithRed:48.0/2560. green:192.0/256.0 blue:123.0/256.0 alpha:1] set];
     
