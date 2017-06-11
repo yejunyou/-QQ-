@@ -20,7 +20,7 @@
 #define YYRGBA(A,B,C,a) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:a]
 #define YYRGB(A,B,C)   YYRGBA(A,B,C,1.0)
 
-@interface YYPlayingViewController ()<UIScrollViewDelegate>
+@interface YYPlayingViewController ()<UIScrollViewDelegate,AVAudioPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *albunView;
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
@@ -103,6 +103,7 @@
     
     // 开始播放音乐
     self.currentPlayer = [YYAudioTool playMusicWithName:playingMusic.filename];
+    self.currentPlayer.delegate = self;
     self.totalTimeLabel.text = [NSString stringWithTime:self.currentPlayer.duration];
     self.currentTimeLabel.text = [NSString stringWithTime:self.currentPlayer.currentTime];
     self.playOrPauseBtn.selected = self.currentPlayer.isPlaying;
@@ -255,5 +256,11 @@
     CGFloat ratio = self.lrcView.contentOffset.x / self.lrcView.width;
     self.iconView.alpha = 1 - ratio;
     self.lrcLabel.alpha = 1 - ratio;
+}
+
+#pragma mark - AVAudioPlayerDelegate
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    if (flag) [self next];
 }
 @end
